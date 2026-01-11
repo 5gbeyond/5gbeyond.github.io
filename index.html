@@ -9,27 +9,33 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
         
         <style>
-            /* Estilo para garantir que os SVGs fiquem perfeitos */
-            .icon-svg {
-                width: 24px;       /* Largura do ícone */
-                height: 24px;      /* Altura do ícone */
-                fill: #ffffff;     /* Cor Branca */
-                margin-right: 12px;
-                display: inline-block;
-                vertical-align: middle;
-            }
+            /* --- CORREÇÃO DOS ÍCONES --- */
             
-            /* Ajuste para o container do link */
+            /* 1. O container do link precisa ser Flexbox para alinhar ícone e texto */
+            /* O !important garante que sobrescreva o CSS do template original */
             .page-item-each {
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                gap: 10px !important; /* Espaço entre o ícone e o texto */
                 text-decoration: none;
-                gap: 8px;
+            }
+
+            /* 2. Configuração do SVG inline */
+            .icon-svg {
+                width: 24px !important;       
+                height: 24px !important;      
+                
+                /* O TRUQUE: currentColor faz o ícone pegar a cor do texto (Azul Escuro) */
+                fill: currentColor !important; 
+                
+                display: block; /* Garante que o SVG renderize como bloco dentro do flex */
+                flex-shrink: 0; /* Impede que o ícone seja esmagado */
             }
             
+            /* Ajuste fino para o texto */
             .item-title {
-                display: inline-block;
+                display: block;
             }
         </style>
     </head>
