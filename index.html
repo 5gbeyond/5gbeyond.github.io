@@ -1,31 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <link href="assets/css/style.css" rel="stylesheet">
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
         <link rel="shortcut icon" href="assets/images/favicon.png" type="image/webp">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
+        <link rel="icon" href="assets/images/favicon.png" type="image/webp">
         <title>5G and Beyond Community</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
         <style>
+            /* CSS for Icons to ensure they are visible */
             .icon-style {
-                font-size: 28px; /* Tamanho do icone */
-                width: 40px;     /* Largura fixa para manter alinhamento */
+                font-size: 28px !important; /* Force size */
+                width: 40px;
                 text-align: center;
-                margin-right: 10px;
-                color: #ffffff;  /* Cor do ícone (branco). Mude se necessário */
-                /* Se quiser as cores originais das marcas, avise que eu ajusto */
+                margin-right: 12px;
+                color: #ffffff; /* White color */
+                display: inline-block;
+                vertical-align: middle;
             }
             
-            /* Ajuste para garantir que o link se comporte como flexbox */
+            /* Specific fix for Brands (Facebook, Whatsapp, Github, etc) */
+            .fa-brands {
+                font-family: "Font Awesome 6 Brands" !important;
+            }
+            /* Specific fix for Solid icons (Globe) */
+            .fa-solid {
+                font-family: "Font Awesome 6 Free" !important;
+                font-weight: 900;
+            }
+
+            /* Flexbox adjustment for the link container */
             .page-item-each {
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                gap: 10px; /* Espaço entre icone e texto */
+                justify-content: center; /* Center content horizontally */
+                text-decoration: none;
+            }
+            
+            /* Text adjustment */
+            .item-title {
+                display: inline-block;
             }
         </style>
     </head>
@@ -44,8 +63,10 @@
 
             <div class="mt-48 page-full-wrap relative ">
                 <input type="hidden" value="creator-page" id="page-type">
-                <img class="display-image m-auto" data-src="assets/images/logo.png" src="assets/images/logo.png" alt="Logo 5G and Beyond"/>
-                <h2 class="page-title page-text-color page-text-font mt-16 text-center">Bem-vindo ao 5G and Beyond! Participe das nossas comunidades:</h2>
+                
+                <img class="display-image m-auto" data-src="assets/images/logo.png" src="assets/images/logo.png" alt="5G and Beyond Logo"/>
+                
+                <h2 class="page-title page-text-color page-text-font mt-16 text-center">Welcome to 5G and Beyond! Join our communities:</h2>
 
                 <div class="mt-24">
 
@@ -53,7 +74,7 @@
                         <div class="page-item flex-both-center absolute"></div>
                         <a target="_blank" class="page-item-each py-10" href="https://www.5gbeyond.com.br/" data-id="website" data-type="page_item">
                             <i class="fa-solid fa-globe icon-style"></i>
-                            <span class="item-title text-center">Website Oficial</span>
+                            <span class="item-title text-center">Official Website</span>
                         </a>
                     </div>
 
@@ -61,7 +82,7 @@
                         <div class="page-item flex-both-center absolute"></div>
                         <a target="_blank" class="page-item-each py-10" href="https://chat.whatsapp.com/KUMVHLIBdRmFzLkWZPqNVU" data-id="whatsapp" data-type="page_item">
                             <i class="fa-brands fa-whatsapp icon-style"></i>
-                            <span class="item-title text-center">Grupo do WhatsApp</span>
+                            <span class="item-title text-center">WhatsApp Group</span>
                         </a>
                     </div>
 
@@ -69,7 +90,7 @@
                         <div class="page-item flex-both-center absolute"></div>
                         <a target="_blank" class="page-item-each py-10" href="https://t.me/+hHiM2uKhN0c1OGE5" data-id="telegram" data-type="page_item">
                             <i class="fa-brands fa-telegram icon-style"></i>
-                            <span class="item-title text-center">Canal do Telegram</span>
+                            <span class="item-title text-center">Telegram Channel</span>
                         </a>
                     </div>
 
@@ -77,7 +98,7 @@
                         <div class="page-item flex-both-center absolute"></div>
                         <a target="_blank" class="page-item-each py-10" href="https://discord.gg/NVGgKnR9" data-id="261685" data-type="page_item">
                             <i class="fa-brands fa-discord icon-style"></i>
-                            <span class="item-title text-center">Canal do Discord</span>
+                            <span class="item-title text-center">Discord Channel</span>
                         </a>
                     </div>  
                         
@@ -85,7 +106,7 @@
                         <div class="page-item flex-both-center absolute"></div>
                         <a target="_blank" class="page-item-each py-10" href="https://www.youtube.com/@5gbeyond" data-id="261685" data-type="page_item">
                             <i class="fa-brands fa-youtube icon-style"></i>
-                            <span class="item-title text-center">Canal do Youtube</span>
+                            <span class="item-title text-center">YouTube Channel</span>
                         </a>
                     </div>  
 
@@ -93,7 +114,7 @@
                         <div class="page-item flex-both-center absolute"></div>
                         <a target="_blank" class="page-item-each py-10" href="https://www.linkedin.com/groups/1788426" data-id="261652" data-type="page_item">
                             <i class="fa-brands fa-linkedin icon-style"></i>
-                            <span class="item-title text-center">Grupo LinkedIn</span>
+                            <span class="item-title text-center">LinkedIn Group</span>
                         </a>
                     </div>
                     
